@@ -11,13 +11,13 @@ Github: https://github.com/MehediMehi
 class Duck:
     def __init__(self, **kwargs):
         self.properties = kwargs
-        
+    
     def quack(self):
         print("Quaaack!")
     
     def walk(self):
         print("Walks like a duck.")
-        
+    
     def get_properties(self):
         return self.properties
     
@@ -36,13 +36,12 @@ class Duck:
     @color.deleter # delete method for color
     def color(self):
         del self.properties['color']
-    
-    
+
 def main():
     # donald = Duck(color = 'blue') # don't need to initialize in this way anymore as we have decorators
     donald = Duck()
     donald.color = 'blue'
     # print(donald.get_property('color')) # don't need to get the value in this way either
     print(donald.color) # using decorators
-    
+
 if __name__ == "__main__": main()
