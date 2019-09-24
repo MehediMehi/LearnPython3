@@ -17,5 +17,6 @@ def isprime(n):
     else:
         print(n, "is a prime number")
         return True
+
 for n in range(1, 20):
     isprime(n)
