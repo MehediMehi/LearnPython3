@@ -7,6 +7,6 @@ Created on Mon Aug  5 18:53:13 2019
 """
 #read the fles from the file
 
-fh = open('lines.txt', 'r+')
+fh = open('lines.txt')
 for line in fh.readlines():
     print(line, end = '')
