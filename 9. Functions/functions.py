@@ -50,7 +50,7 @@ def testfunc4(this, that, other, *args): # args works as a tuple
 def testfunc5(**kwargs): # keyword arguments, works as a dictionary
     print('testfunc5:')
     print('values', kwargs['one'], kwargs['two'], kwargs['four'])
-    
+
 def testfunc6(this, that, other, *args, **kwargs): # only restriction is here you have to follow the order if you use all (like first simple arguments, then *args and finally **kwargs)
     print('testfunc6:')
     print(this, that, other, args, kwargs)
