@@ -40,19 +40,19 @@ def main():
 	fido = Dog()
 	fido.bark()
 	fido.fur()
-
+	
 	for o in (donald, fido):
 		o.quack()
 		o.walk()
 		o.bark()
 		o.fur()
-
+	
 	# objects in python don't actually care what the name of the class is.
 	# duck typing (loosly typed)
 	''' Duck typing in computer programming is an application of the duck test—"If it walks like a duck and it quacks like a duck,
 	then it must be a duck"—to determine if an object can be used for a particular purpose.
 	With normal typing, suitability is determined by an object's type. '''
-
+	
 	in_the_forest(donald) # providing duck while expecting dog
 	in_the_pond(fido) # prividing dog while expecting duck
 
