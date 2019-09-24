@@ -66,5 +66,5 @@ def main():
     for i in o7: print(i, end=' ')
     print()
     """
-    
+
 if __name__ == "__main__": main()
