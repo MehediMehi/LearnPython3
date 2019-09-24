@@ -20,4 +20,3 @@ def main():
              print(pattern.sub('###', line), end='') # substitution if matches and convert into ###
 
 if __name__ == "__main__": main()
-             
