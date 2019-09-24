@@ -14,8 +14,7 @@ def main():
         print('could not read file:', e)
     except ValueError as e: # user defined error message for file type
         print("bad file name", e)
-        
-    
+
 def readfile(filename): # function to open file and return lines
     if filename.endswith(".txt"): # check the filename 
         fh = open(filename)
