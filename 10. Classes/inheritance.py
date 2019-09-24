@@ -15,7 +15,7 @@ class Animal:
 class Duck(Animal): # Duck is inheriting Animal
 	def quack(self):
 		print('Quaaack!')
-
+	
 	def walk(self):
 		super().walk() # accessing parent walk method using super (immediate parent class)
 		print('Walks like a duck.') # uses chield class walk method (override)
@@ -29,7 +29,7 @@ def main():
 	donald.quack()
 	donald.walk()
 	donald.clothes()
-
+	
 	fido = Dog()
 	fido.walk()
 	fido.clothes()
