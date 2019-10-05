@@ -26,5 +26,5 @@ def main():
     print(outstr, file = fout) # print it to our out file
     print(outstr) # also print in the console screen
     print('done')
-    
+
 if __name__ == "__main__": main()
