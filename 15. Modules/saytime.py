@@ -66,7 +66,7 @@ class numwords(): # formats a number into words
     def number(self):
         "Return the number as a number"
         return str(self.__number);
-    
+
 class saytime(numwords): # inherits numwords. And this class is for formating the time as words
     """
         return the time (from two parameters) as words,
