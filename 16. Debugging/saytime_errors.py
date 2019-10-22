@@ -36,10 +36,10 @@ class numwords():
         }
     }
     _oor = 'OOR'    # Out Of Range
-
+    
     def __init__(self, n):
         self.__number = n;
-
+    
     def numwords(self, num = None):
         "Return the number as words"
         n = self.__number if num is None else num
@@ -64,7 +64,7 @@ class numwords():
         else:
             s += self._oor
         return s
-
+    
     def number(self):
         "Return the number as a number"
         return str(self.__number);
@@ -74,18 +74,18 @@ class saytime(numwords):
         return the time (from two parameters) as words,
         e.g., fourteen til noon, quarter past one, etc.
     """
-
+   
    _specials = {
         'noon': 'noon',
         'midnight': 'midnight',
         'til': 'til',
         'past': 'past'
     }
-
+    
     def __init__(self, h, m):
         self._hour = abs(int(h))
         self._min = abs(int(m))
-
+    
     def words(self):
         h = self._hour
         m = self._min
@@ -100,19 +100,19 @@ class saytime(numwords):
             m = 60 - m
         if h > 23: h -= 24
         elif h > 12: h -= 12
-
+        
         # hword is the hours word)
         if h is 0: hword = self._specials['midnight']
         elif h is 12: hword = self._specials['noon']
         else: hword = self.numwords(h)
-
+        
         if m is 0:
             if h in (0, 12): return hword   # for noon and midnight
             else: return "{} {}".format(self.numwords(h), self._words['quarters'][m])
         if m % 15 is 0:
             return "{} {} {}".format(self._words['quarters'][m // 15], sign, hword) 
         return "{} {} {}".format(self.numwords(m), sign, hword) 
-
+    
     def digits(self):
         "return the traditionl time, e.g., 13:42"
         return "{:02}:{:02}".format(self._hour, self._min)
@@ -144,7 +144,7 @@ def test():
     )
     for l in list:
         print(l, numwords(l).numwords())
-
+    
     print("\ntime test:")
     list = (
         (0, 0), (0, 1), (11, 0), (12, 0), (13, 0), (12, 29), (12, 30),
@@ -153,7 +153,7 @@ def test():
     )
     for l in list:
         print(saytime(*l).digits(), saytime(*l).words())
-
+    
     print("\nlocal time is " + saytime_t(time.localtime()).words())
 
 if __name__ == "__main__": main()
