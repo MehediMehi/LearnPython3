@@ -92,7 +92,7 @@ class saytime(numwords):
         
         if h > 23: return self._oor     # OOR errors
         if m > 59: return self._oor
-
+        
         sign = self._specials['past']        
         if self._min > 30:
             sign = self._specials['til']
