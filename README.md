@@ -16,3 +16,5 @@ Files
 Database (sqlite3)
 Modules
 and Debugging games with unittest framework for practice testing.
+
+Python3 documentation: https://docs.python.org/3/
